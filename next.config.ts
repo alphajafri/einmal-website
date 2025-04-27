@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "export",
-  images: {
-    unoptimized: true, // important for static export if you're using next/image
-  },
+  basePath: "/einmal-website", // your GitHub repo name
+  assetPrefix: "/einmal-website", // important for images, videos
 };
+
+module.exports = nextConfig;
 
 export default nextConfig;
